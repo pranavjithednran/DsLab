@@ -28,23 +28,25 @@ scanf("%d",&a[i]);
 void printarray(int ar[],int n)
 {
 int i;
-for(i=0;i<n;i++){
+for(i=0;i<n;i++)
 printf("%d",ar[i]);
 return;
 }
-}
+
 void merge(int a[],int b[],int c[],int m,int n){
 int i,j,k;
 i=j=k=0;
 while(i<m && j<n){
-if(a[i]<b[j]){
+if (a[i]<b[j]){
 c[k]=a[i];
 i=i+1;
 k=k+1;
-}else{
+}
+else{
 c[k]=b[j];
 j=j+1;
 k=k+1;
+}
 }
 
 while(i<m){
@@ -53,6 +55,5 @@ c[k++]=a[i++];
 while(j<n){
 c[k++]=b[j++];
 }
+
 }
-
-
